@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+<head>
+    <style>
+    body {
+        text-align: left;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    table,
+    th,
+    td {
+
+        /* Styling the border. */
+        border: 3.5px solid blue;
+    }
+    </style>
+</head>
+
+ <body>
+    <h1><strong>Your Vocapulary List:</strong></h1>
+    <h2>📝📝📝</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Vocabulary</th>
+            <th>in English</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for ele in obj %}
+            <tr>
+                <td>
+                <strong>{{ ele.vocab_name }}</strong>
+                </td>
+                <td>
+                {{ ele.ans }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+
+{% endblock %}
+
+

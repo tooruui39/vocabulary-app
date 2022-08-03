@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+<head>
+    <style>
+    body {
+        text-align: left;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    table,
+    th,
+    td {
+
+        /* Styling the border. */
+        border: 3.5px solid blue;
+    }
+    </style>
+</head>
+
+ <body>
+    <h1><strong>Today's News:</strong></h1>
+    <h2>📝📝📝</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Headline</th>
+            <th>Brief Summary</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for ele in obj_2 %}
+            <tr>
+                <td>
+                <strong>{{ ele.titles }}</strong>
+                </td>
+                <td>
+                {{ ele.words }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+
+
+
+{% endblock %}
